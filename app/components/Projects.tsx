@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { projects } from '@/lib/data'
-import { ExternalLink, Github } from 'lucide-react'
 import GhibliIcon from './GhibliIcons'
 
 export default function Projects() {
