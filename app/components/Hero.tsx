@@ -51,6 +51,35 @@ export default function Hero() {
         </div>
       </motion.div>
 
+      {/* Enhanced scroll indicator - moved outside the content div */}
+      <motion.div
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{ 
+          opacity: { delay: 1, duration: 0.5 },
+          y: { repeat: Infinity, duration: 2 }
+        }}
+        onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+        <div className="relative">
+          <div className="w-6 h-10 border-2 border-emerald-400 rounded-full flex justify-center">
+            <motion.div 
+              className="w-1 h-3 bg-emerald-400 rounded-full mt-2"
+              animate={{ y: [0, 5, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            />
+          </div>
+          <motion.div
+            className="absolute -top-8 left-1/2 transform -translate-x-1/2"
+            animate={{ opacity: [0, 1, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+          >
+            <span className="text-xs text-emerald-600">Scroll</span>
+          </motion.div>
+        </div>
+      </motion.div>
+
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -193,30 +222,7 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Enhanced scroll indicator */}
-          <motion.div
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            <div className="relative">
-              <div className="w-6 h-10 border-2 border-emerald-400 rounded-full flex justify-center">
-                <motion.div 
-                  className="w-1 h-3 bg-emerald-400 rounded-full mt-2"
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                />
-              </div>
-              <motion.div
-                className="absolute -top-8 left-1/2 transform -translate-x-1/2"
-                animate={{ opacity: [0, 1, 0] }}
-                transition={{ repeat: Infinity, duration: 2 }}
-              >
-                <span className="text-xs text-emerald-600">Scroll</span>
-              </motion.div>
-            </div>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>

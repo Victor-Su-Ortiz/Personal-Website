@@ -5,6 +5,7 @@ import './globals.css'
 import { GhibliCursor } from './components/GhibliCursor'
 import { GhibliBackground } from './components/GhibliBackground'
 import { GhibliDecorations } from './components/GhibliDecorations'
+import { GhibliHoverZones } from './components/GhibliHoverZones'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,9 @@ export default function RootLayout({
       <body className={`${inter.className} bg-sky-50 text-slate-800 custom-cursor-active`}>
         {/* Enhanced Ghibli Background */}
         <GhibliBackground />
+        
+        {/* Hover-triggered character popups */}
+        <GhibliHoverZones />
         
         {/* Floating Ghibli Decorations */}
         <GhibliDecorations />
