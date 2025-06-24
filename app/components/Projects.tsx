@@ -52,7 +52,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 {project.github && (
                   <a
                     href={project.github}
@@ -75,7 +75,7 @@ export default function Projects() {
                     <span className="text-sm">Demo</span>
                   </a>
                 )}
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>
