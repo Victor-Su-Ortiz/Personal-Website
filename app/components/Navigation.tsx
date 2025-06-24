@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import PixelIcon from './PixelIcon'
+import GhibliIcon from './GhibliIcons'
 
 const navItems = [
   { name: 'Home', href: '#home', iconType: 'star' as const },
@@ -16,6 +16,7 @@ const navItems = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,15 +37,27 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <ul className="flex justify-center gap-6">
           {navItems.map((item) => (
-            <li key={item.name}>
+            <motion.li 
+              key={item.name}
+              onHoverStart={() => setHoveredItem(item.name)}
+              onHoverEnd={() => setHoveredItem(null)}
+            >
               <Link
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-emerald-100 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-emerald-100 transition-colors relative"
               >
-                <PixelIcon type={item.iconType} size="sm" />
+                <motion.div
+                  animate={{ 
+                    rotate: hoveredItem === item.name ? [0, -10, 10, -10, 0] : 0,
+                    scale: hoveredItem === item.name ? 1.2 : 1
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <GhibliIcon type={item.iconType} size="sm" />
+                </motion.div>
                 <span className="hidden md:inline">{item.name}</span>
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

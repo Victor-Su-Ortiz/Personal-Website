@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Award } from 'lucide-react'
 import { education, awards } from '@/lib/data'
-import PixelIcon from './PixelIcon'
+import GhibliIcon from './GhibliIcons'
 
 export default function Education() {
   return (
@@ -29,7 +29,7 @@ export default function Education() {
               className="bg-white rounded-2xl p-8 shadow-lg ghibli-shadow"
             >
               <div className="flex items-start gap-4 mb-4">
-                <PixelIcon type={edu.iconType} size="lg" />
+                <GhibliIcon type={edu.iconType} size="lg" />
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-slate-800">{edu.school}</h3>
                   <p className="text-emerald-600 font-medium">{edu.degree}</p>
@@ -39,7 +39,7 @@ export default function Education() {
               <div className="space-y-2">
                 {edu.highlights.map((highlight, i) => (
                   <div key={i} className="flex items-center gap-2 text-slate-600">
-                    <PixelIcon type="star" size="sm" />
+                    <GhibliIcon type="star" size="sm" />
                     {highlight}
                   </div>
                 ))}
@@ -64,7 +64,7 @@ export default function Education() {
                 key={index}
                 className="bg-white/80 rounded-lg p-4 text-center shadow-md"
               >
-                <PixelIcon type="award" size="md" className="mx-auto mb-2" />
+                <GhibliIcon type="award" size="md" className="mx-auto mb-2" />
                 <p className="text-slate-700">{award}</p>
               </div>
             ))}

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { experiences } from '@/lib/data'
-import PixelIcon from './PixelIcon'
+import GhibliIcon from './GhibliIcons'
 
 export default function Experience() {
   return (
@@ -30,7 +30,7 @@ export default function Experience() {
               <div className="flex items-start gap-4">
                 <div className="hidden md:block">
                   <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-                    <PixelIcon type={exp.iconType} size="md" />
+                    <GhibliIcon type={exp.iconType} size="md" />
                   </div>
                 </div>
                 <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg ghibli-shadow">
@@ -47,7 +47,7 @@ export default function Experience() {
                   <ul className="space-y-2">
                     {exp.description.map((desc, i) => (
                       <li key={i} className="text-slate-600 flex items-start">
-                        <PixelIcon type="plant" size="sm" className="mr-2 mt-1 flex-shrink-0" />
+                        <GhibliIcon type="plant" size="sm" className="mr-2 mt-1 flex-shrink-0" />
                         <span>{desc}</span>
                       </li>
                     ))}

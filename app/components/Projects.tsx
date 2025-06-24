@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { projects } from '@/lib/data'
 import { ExternalLink, Github } from 'lucide-react'
-import PixelIcon from './PixelIcon'
+import GhibliIcon from './GhibliIcons'
 
 export default function Projects() {
   return (
@@ -29,7 +29,7 @@ export default function Projects() {
               className="bg-white rounded-2xl p-6 shadow-lg ghibli-hover ghibli-shadow group"
             >
               <div className="mb-4">
-                <PixelIcon type={project.iconType} size="lg" />
+                <GhibliIcon type={project.iconType} size="lg" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-slate-800">{project.title}</h3>
               <p className="text-slate-600 mb-4">{project.description}</p>

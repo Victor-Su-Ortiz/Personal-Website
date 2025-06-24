@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { skills } from '@/lib/data'
-import PixelIcon from './PixelIcon'
+import GhibliIcon from './GhibliIcons'
 
 export default function Skills() {
   const skillCategories = [
@@ -49,7 +49,7 @@ export default function Skills() {
               className="bg-white rounded-2xl p-6 shadow-lg"
             >
               <div className="flex items-center gap-3 mb-6">
-                <PixelIcon type={category.iconType} size="md" />
+                <GhibliIcon type={category.iconType} size="md" />
                 <h3 className="text-xl font-bold text-slate-800">{category.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">

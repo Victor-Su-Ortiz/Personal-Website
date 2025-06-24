@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react'
 import { personalInfo } from '@/lib/data'
-import PixelIcon from './PixelIcon'
+import GhibliIcon from './GhibliIcons'
 
 export default function Contact() {
   return (
@@ -26,7 +26,7 @@ export default function Contact() {
         >
           <div className="text-center mb-8">
             <div className="inline-block p-4 bg-emerald-100 rounded-full mb-4">
-              <PixelIcon type="contact" size="lg" />
+              <GhibliIcon type="contact" size="lg" />
             </div>
             <p className="text-slate-600">
               I'm always excited to connect with fellow developers, researchers, and potential collaborators!
