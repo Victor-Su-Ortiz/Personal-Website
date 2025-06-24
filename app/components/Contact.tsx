@@ -15,7 +15,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-600 to-sky-600 bg-clip-text text-transparent"
         >
-          Let's Connect
+          Let&apos;s Connect
         </motion.h2>
 
         <motion.div
@@ -29,7 +29,7 @@ export default function Contact() {
               <GhibliIcon type="contact" size="lg" />
             </div>
             <p className="text-slate-600">
-              I'm always excited to connect with fellow developers, researchers, and potential collaborators!
+              I&apos;m always excited to connect with fellow developers, researchers, and potential collaborators!
             </p>
           </div>
 
