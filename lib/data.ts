@@ -6,7 +6,7 @@ export const personalInfo = {
     email: "vsuortiz1@gmail.com",
     phone: "917-291-8452",
     linkedin: "linkedin.com/in/victor-su-ortiz",
-    github: "github.com/vsuortiz",
+    github: "github.com/victor-su-ortiz",
   }
   
   export const experiences = [

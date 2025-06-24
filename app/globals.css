@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* FIX: Reset cursor to default first */
+* {
+  cursor: auto !important;
+}
+
+/* Hide default cursor */
+body {
+  cursor: none !important;
+}
+
+/* Ensure all interactive elements still work */
+a, button, input, textarea, select, [role="button"] {
+  cursor: none !important;
+}
+
 /* Animated Clouds */
 .clouds {
   position: absolute;
@@ -67,4 +82,9 @@
 /* Animation delays */
 .delay-1000 {
   animation-delay: 1000ms;
+}
+
+/* Disable cursor change on hover for custom cursor */
+.custom-cursor-active * {
+  cursor: none !important;
 }
